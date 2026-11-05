@@ -1,0 +1,36 @@
+# Tracking Pipeline Configuration
+# Note: Paths are intended to resolve relative to the project root.
+# This configuration is a placeholder for the future implementation.
+
+# Input video path
+input_video: "data/raw/videos/traffic_sample_01.mp4"
+
+# Model weights path
+model_weights: "models/pretrained/yolov8n.pt"
+
+# Tracker configuration (e.g. bytetrack.yaml or botsort.yaml)
+tracker: "bytetrack.yaml"
+
+# Detection confidence threshold
+confidence_threshold: 0.3
+
+# Target class IDs to detect and track (COCO classes):
+# 0: person
+# 1: bicycle
+# 2: car
+# 3: motorcycle
+# 5: bus
+# 7: truck
+class_ids:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 5
+  - 7
+
+# Output settings
+output_dir: "outputs/videos"
+show_preview: true
+save_output: true
+
