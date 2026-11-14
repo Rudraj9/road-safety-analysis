@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <task>
+      <id>0</id>
+      <name>0076d1e2-ef37-4445-9fa9-7d3bdf25bd8f</name>
+      <size>60</size>
+      <mode>interpolation</mode>
+      <overlap>0</overlap>
+      <bugtracker/>
+      <created>2026-11-13 00:00:00.000000</created>
+      <updated>2026-11-13 00:00:00.000000</updated>
+      <start_frame>0</start_frame>
+      <stop_frame>59</stop_frame>
+      <frame_filter/>
+      <original_size>
+        <width>1920</width>
+        <height>994</height>
+      </original_size>
+      <labels>
+        <label>
+          <name>pedestrian</name>
+          <color>#ff0000</color>
+          <type>rectangle</type>
+          <attributes/>
+        </label>
+        <label>
+          <name>two_wheeler</name>
+          <color>#00ff00</color>
+          <type>rectangle</type>
+          <attributes/>
+        </label>
+        <label>
+          <name>car</name>
+          <color>#0000ff</color>
+          <type>rectangle</type>
+          <attributes/>
+        </label>
+        <label>
+          <name>autorickshaw</name>
+          <color>#ffff00</color>
+          <type>rectangle</type>
+          <attributes/>
+        </label>
+        <label>
+          <name>bus_truck</name>
+          <color>#ff00ff</color>
+          <type>rectangle</type>
+          <attributes/>
+        </label>
+      </labels>
+    </task>
+  </meta>
+  <track id="1" label="two_wheeler" source="auto">
+    <box frame="0" xtl="1234.67" ytl="300.17" xbr="1339.69" ybr="407.91" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="2" label="pedestrian" source="auto">
+    <box frame="0" xtl="493.17" ytl="466.57" xbr="638.63" ybr="562.07" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="3" label="autorickshaw" source="auto">
+    <box frame="1" xtl="1053.20" ytl="193.58" xbr="1088.20" ybr="246.48" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="4" label="car" source="auto">
+    <box frame="1" xtl="748.27" ytl="192.79" xbr="860.17" ybr="276.52" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="5" label="two_wheeler" source="auto">
+    <box frame="1" xtl="343.24" ytl="272.11" xbr="509.49" ybr="472.73" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="6" label="pedestrian" source="auto">
+    <box frame="1" xtl="719.90" ytl="186.63" xbr="745.08" ybr="218.04" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="7" label="pedestrian" source="auto">
+    <box frame="1" xtl="966.26" ytl="207.34" xbr="985.62" ybr="246.49" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="8" label="car" source="auto">
+    <box frame="2" xtl="755.66" ytl="201.99" xbr="830.70" ybr="257.73" outside="0" occluded="0" z_order="0"/>
+    <box frame="11" xtl="759.26" ytl="197.75" xbr="827.18" ybr="249.71" outside="0" occluded="0" z_order="0"/>
+    <box frame="13" xtl="714.29" ytl="195.13" xbr="816.58" ybr="262.71" outside="0" occluded="0" z_order="0"/>
+    <box frame="36" xtl="638.69" ytl="196.00" xbr="777.97" ybr="285.27" outside="0" occluded="0" z_order="0"/>
+    <box frame="50" xtl="518.20" ytl="205.58" xbr="748.70" ybr="358.31" outside="0" occluded="0" z_order="0"/>
+    <box frame="54" xtl="517.92" ytl="207.85" xbr="637.71" ybr="295.39" outside="0" occluded="0" z_order="0"/>
+    <box frame="55" xtl="409.50" ytl="190.97" xbr="657.06" ybr="357.98" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="9" label="autorickshaw" source="auto">
+    <box frame="2" xtl="922.38" ytl="194.07" xbr="957.88" ybr="250.64" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="10" label="autorickshaw" source="auto">
+    <box frame="2" xtl="1064.52" ytl="195.22" xbr="1098.87" ybr="245.45" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="11" label="car" source="auto">
+    <box frame="2" xtl="582.24" ytl="192.66" xbr="771.57" ybr="319.92" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="12" label="pedestrian" source="auto">
+    <box frame="2" xtl="1032.15" ytl="203.00" xbr="1050.02" ybr="233.57" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="13" label="pedestrian" source="auto">
+    <box frame="2" xtl="1145.35" ytl="222.02" xbr="1171.68" ybr="303.44" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="14" label="two_wheeler" source="auto">
+    <box frame="2" xtl="850.52" ytl="217.58" xbr="901.68" ybr="300.29" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="15" label="car" source="auto">
+    <box frame="3" xtl="942.58" ytl="190.90" xbr="1007.47" ybr="248.15" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="16" label="two_wheeler" source="auto">
+    <box frame="3" xtl="684.41" ytl="241.54" xbr="791.95" ybr="383.82" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="17" label="autorickshaw" source="auto">
+    <box frame="4" xtl="790.63" ytl="185.57" xbr="901.05" ybr="290.97" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="18" label="car" source="auto">
+    <box frame="4" xtl="304.99" ytl="215.97" xbr="550.11" ybr="373.32" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="19" label="bus_truck" source="auto">
+    <box frame="5" xtl="801.71" ytl="143.62" xbr="938.75" ybr="292.85" outside="0" occluded="0" z_order="0"/>
+    <box frame="7" xtl="782.50" ytl="139.34" xbr="883.34" ybr="264.35" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="20" label="two_wheeler" source="auto">
+    <box frame="5" xtl="732.82" ytl="223.62" xbr="767.78" ybr="292.93" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="21" label="autorickshaw" source="auto">
+    <box frame="5" xtl="530.09" ytl="177.06" xbr="745.92" ybr="396.64" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="22" label="two_wheeler" source="auto">
+    <box frame="6" xtl="1009.07" ytl="218.23" xbr="1046.55" ybr="269.27" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="23" label="car" source="auto">
+    <box frame="7" xtl="520.76" ytl="173.77" xbr="724.85" ybr="318.76" outside="0" occluded="0" z_order="0"/>
+    <box frame="9" xtl="677.99" ytl="186.19" xbr="876.58" ybr="328.51" outside="0" occluded="0" z_order="0"/>
+    <box frame="12" xtl="652.79" ytl="198.14" xbr="815.66" ybr="306.80" outside="0" occluded="0" z_order="0"/>
+    <box frame="15" xtl="770.74" ytl="183.17" xbr="866.89" ybr="264.45" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="24" label="bus_truck" source="auto">
+    <box frame="7" xtl="521.63" ytl="173.46" xbr="721.41" ybr="317.92" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="25" label="pedestrian" source="auto">
+    <box frame="7" xtl="1037.37" ytl="195.07" xbr="1049.88" ybr="220.11" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="26" label="car" source="auto">
+    <box frame="7" xtl="724.20" ytl="193.15" xbr="794.85" ybr="254.04" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="27" label="two_wheeler" source="auto">
+    <box frame="7" xtl="957.48" ytl="211.60" xbr="1014.17" ybr="291.17" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="28" label="car" source="auto">
+    <box frame="8" xtl="941.80" ytl="200.57" xbr="977.67" ybr="226.98" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="29" label="car" source="auto">
+    <box frame="8" xtl="799.36" ytl="193.08" xbr="866.93" ybr="246.24" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="30" label="bus_truck" source="auto">
+    <box frame="8" xtl="570.75" ytl="120.14" xbr="772.19" ybr="315.31" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="31" label="car" source="auto">
+    <box frame="8" xtl="1759.51" ytl="229.37" xbr="1919.11" ybr="667.01" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="32" label="two_wheeler" source="auto">
+    <box frame="8" xtl="834.65" ytl="228.68" xbr="924.78" ybr="361.02" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="33" label="car" source="auto">
+    <box frame="8" xtl="883.31" ytl="192.04" xbr="956.75" ybr="266.31" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="34" label="car" source="auto">
+    <box frame="9" xtl="1717.94" ytl="240.17" xbr="1919.76" ybr="612.88" outside="0" occluded="0" z_order="0"/>
+    <box frame="10" xtl="1719.02" ytl="241.72" xbr="1919.84" ybr="615.69" outside="0" occluded="0" z_order="0"/>
+    <box frame="11" xtl="1718.85" ytl="242.20" xbr="1919.82" ybr="607.30" outside="0" occluded="0" z_order="0"/>
+    <box frame="12" xtl="1718.00" ytl="240.64" xbr="1919.82" ybr="603.88" outside="0" occluded="0" z_order="0"/>
+    <box frame="13" xtl="1718.64" ytl="241.33" xbr="1919.81" ybr="608.94" outside="0" occluded="0" z_order="0"/>
+    <box frame="14" xtl="1718.89" ytl="239.82" xbr="1919.97" ybr="612.08" outside="0" occluded="0" z_order="0"/>
+    <box frame="15" xtl="1718.35" ytl="242.41" xbr="1919.82" ybr="606.45" outside="0" occluded="0" z_order="0"/>
+    <box frame="16" xtl="1718.59" ytl="241.47" xbr="1919.86" ybr="608.64" outside="0" occluded="0" z_order="0"/>
+    <box frame="17" xtl="1718.50" ytl="242.64" xbr="1919.84" ybr="607.54" outside="0" occluded="0" z_order="0"/>
+    <box frame="18" xtl="1718.00" ytl="243.21" xbr="1919.82" ybr="611.95" outside="0" occluded="0" z_order="0"/>
+    <box frame="19" xtl="1720.27" ytl="243.32" xbr="1919.89" ybr="605.10" outside="0" occluded="0" z_order="0"/>
+    <box frame="20" xtl="1719.14" ytl="240.65" xbr="1919.75" ybr="616.62" outside="0" occluded="0" z_order="0"/>
+    <box frame="21" xtl="1717.80" ytl="240.37" xbr="1919.79" ybr="610.86" outside="0" occluded="0" z_order="0"/>
+    <box frame="22" xtl="1719.28" ytl="242.51" xbr="1919.86" ybr="607.60" outside="0" occluded="0" z_order="0"/>
+    <box frame="23" xtl="1719.86" ytl="241.54" xbr="1919.79" ybr="619.11" outside="0" occluded="0" z_order="0"/>
+    <box frame="24" xtl="1719.37" ytl="241.26" xbr="1919.78" ybr="622.46" outside="0" occluded="0" z_order="0"/>
+    <box frame="25" xtl="1719.56" ytl="242.20" xbr="1919.80" ybr="609.94" outside="0" occluded="0" z_order="0"/>
+    <box frame="26" xtl="1717.75" ytl="241.23" xbr="1919.73" ybr="610.04" outside="0" occluded="0" z_order="0"/>
+    <box frame="27" xtl="1718.54" ytl="241.48" xbr="1919.85" ybr="610.74" outside="0" occluded="0" z_order="0"/>
+    <box frame="28" xtl="1718.29" ytl="242.60" xbr="1919.77" ybr="617.15" outside="0" occluded="0" z_order="0"/>
+    <box frame="29" xtl="1719.96" ytl="240.34" xbr="1919.75" ybr="635.60" outside="0" occluded="0" z_order="0"/>
+    <box frame="30" xtl="1718.66" ytl="242.09" xbr="1919.88" ybr="609.14" outside="0" occluded="0" z_order="0"/>
+    <box frame="31" xtl="1718.57" ytl="240.77" xbr="1919.78" ybr="632.25" outside="0" occluded="0" z_order="0"/>
+    <box frame="32" xtl="1719.04" ytl="242.07" xbr="1919.75" ybr="623.34" outside="0" occluded="0" z_order="0"/>
+    <box frame="33" xtl="1717.76" ytl="243.16" xbr="1919.82" ybr="620.08" outside="0" occluded="0" z_order="0"/>
+    <box frame="34" xtl="1718.26" ytl="241.44" xbr="1919.81" ybr="607.25" outside="0" occluded="0" z_order="0"/>
+    <box frame="35" xtl="1717.74" ytl="243.25" xbr="1919.97" ybr="605.55" outside="0" occluded="0" z_order="0"/>
+    <box frame="36" xtl="1718.74" ytl="240.05" xbr="1919.81" ybr="616.65" outside="0" occluded="0" z_order="0"/>
+    <box frame="37" xtl="1719.12" ytl="243.33" xbr="1919.71" ybr="620.71" outside="0" occluded="0" z_order="0"/>
+    <box frame="38" xtl="1741.71" ytl="221.17" xbr="1919.62" ybr="621.79" outside="0" occluded="0" z_order="0"/>
+    <box frame="39" xtl="1798.14" ytl="285.94" xbr="1919.24" ybr="619.67" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="35" label="car" source="auto">
+    <box frame="9" xtl="445.89" ytl="207.06" xbr="625.46" ybr="317.89" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="36" label="car" source="auto">
+    <box frame="9" xtl="917.44" ytl="199.92" xbr="967.49" ybr="239.18" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="37" label="car" source="auto">
+    <box frame="10" xtl="585.30" ytl="193.93" xbr="730.82" ybr="286.86" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="38" label="car" source="auto">
+    <box frame="11" xtl="808.78" ytl="194.95" xbr="900.93" ybr="260.03" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="39" label="autorickshaw" source="auto">
+    <box frame="11" xtl="1042.32" ytl="193.90" xbr="1076.52" ybr="244.44" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="40" label="car" source="auto">
+    <box frame="11" xtl="366.25" ytl="204.48" xbr="581.33" ybr="342.70" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="41" label="two_wheeler" source="auto">
+    <box frame="11" xtl="645.04" ytl="227.27" xbr="711.35" ybr="316.61" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="42" label="car" source="auto">
+    <box frame="12" xtl="793.31" ytl="194.19" xbr="855.53" ybr="248.30" outside="0" occluded="0" z_order="0"/>
+    <box frame="51" xtl="0.00" ytl="235.95" xbr="465.18" ybr="664.47" outside="0" occluded="0" z_order="0"/>
+    <box frame="54" xtl="119.63" ytl="203.83" xbr="480.11" ybr="447.60" outside="0" occluded="0" z_order="0"/>
+    <box frame="55" xtl="112.34" ytl="238.16" xbr="341.40" ybr="415.94" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="43" label="car" source="auto">
+    <box frame="13" xtl="570.48" ytl="200.33" xbr="721.78" ybr="285.71" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="44" label="car" source="auto">
+    <box frame="13" xtl="61.03" ytl="210.99" xbr="534.10" ybr="524.49" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="45" label="car" source="auto">
+    <box frame="14" xtl="1625.61" ytl="204.96" xbr="1778.33" ybr="413.26" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="46" label="car" source="auto">
+    <box frame="14" xtl="379.30" ytl="208.86" xbr="590.54" ybr="334.05" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="47" label="pedestrian" source="auto">
+    <box frame="14" xtl="1015.09" ytl="198.33" xbr="1032.21" ybr="229.37" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="48" label="car" source="auto">
+    <box frame="14" xtl="617.09" ytl="194.49" xbr="747.97" ybr="281.49" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="49" label="car" source="auto">
+    <box frame="15" xtl="0.00" ytl="229.56" xbr="323.46" ybr="466.55" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="50" label="pedestrian" source="auto">
+    <box frame="15" xtl="1013.81" ytl="198.24" xbr="1030.15" ybr="230.65" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="51" label="autorickshaw" source="auto">
+    <box frame="15" xtl="502.49" ytl="165.28" xbr="722.59" ybr="417.17" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="52" label="car" source="auto">
+    <box frame="16" xtl="36.75" ytl="220.56" xbr="403.54" ybr="455.91" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="53" label="car" source="auto">
+    <box frame="16" xtl="601.84" ytl="173.99" xbr="791.60" ybr="314.26" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="54" label="bus_truck" source="auto">
+    <box frame="16" xtl="910.83" ytl="167.86" xbr="978.62" ybr="236.89" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="55" label="car" source="auto">
+    <box frame="16" xtl="1625.09" ytl="204.16" xbr="1778.08" ybr="411.65" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="56" label="pedestrian" source="auto">
+    <box frame="16" xtl="1008.16" ytl="196.12" xbr="1025.54" ybr="240.42" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="57" label="pedestrian" source="auto">
+    <box frame="17" xtl="1006.07" ytl="196.57" xbr="1026.51" ybr="240.72" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="58" label="car" source="auto">
+    <box frame="18" xtl="1625.12" ytl="204.93" xbr="1776.84" ybr="412.78" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="59" label="pedestrian" source="auto">
+    <box frame="18" xtl="1006.02" ytl="195.44" xbr="1024.86" ybr="242.97" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="60" label="pedestrian" source="auto">
+    <box frame="19" xtl="1003.39" ytl="193.47" xbr="1025.78" ybr="243.92" outside="0" occluded="0" z_order="0"/>
+    <box frame="23" xtl="1006.02" ytl="184.06" xbr="1042.16" ybr="262.99" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="61" label="two_wheeler" source="auto">
+    <box frame="19" xtl="715.72" ytl="248.86" xbr="820.63" ybr="403.65" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="62" label="bus_truck" source="auto">
+    <box frame="19" xtl="754.10" ytl="94.43" xbr="919.72" ybr="282.54" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="63" label="car" source="auto">
+    <box frame="19" xtl="1625.31" ytl="204.75" xbr="1777.47" ybr="413.81" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="64" label="bus_truck" source="auto">
+    <box frame="20" xtl="554.88" ytl="45.42" xbr="862.84" ybr="338.01" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="65" label="pedestrian" source="auto">
+    <box frame="21" xtl="1005.60" ytl="189.40" xbr="1033.97" ybr="254.64" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="66" label="pedestrian" source="auto">
+    <box frame="22" xtl="1009.08" ytl="186.18" xbr="1039.59" ybr="267.76" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="67" label="car" source="auto">
+    <box frame="23" xtl="1719.14" ytl="239.62" xbr="1919.13" ybr="799.93" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="68" label="bus_truck" source="auto">
+    <box frame="23" xtl="590.47" ytl="122.17" xbr="789.23" ybr="326.85" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="69" label="autorickshaw" source="auto">
+    <box frame="23" xtl="591.16" ytl="121.05" xbr="788.62" ybr="327.74" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="70" label="car" source="auto">
+    <box frame="24" xtl="1718.34" ytl="240.68" xbr="1919.08" ybr="804.35" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="71" label="bus_truck" source="auto">
+    <box frame="24" xtl="727.31" ytl="153.65" xbr="850.85" ybr="274.21" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="72" label="pedestrian" source="auto">
+    <box frame="24" xtl="1000.65" ytl="179.58" xbr="1040.94" ybr="287.45" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="73" label="car" source="auto">
+    <box frame="25" xtl="1718.53" ytl="241.61" xbr="1919.02" ybr="835.37" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="74" label="bus_truck" source="auto">
+    <box frame="25" xtl="542.51" ytl="128.59" xbr="750.62" ybr="320.87" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="75" label="car" source="auto">
+    <box frame="26" xtl="1716.83" ytl="239.80" xbr="1918.99" ybr="802.53" outside="0" occluded="0" z_order="0"/>
+    <box frame="27" xtl="1717.00" ytl="240.52" xbr="1919.05" ybr="829.30" outside="0" occluded="0" z_order="0"/>
+    <box frame="28" xtl="1716.97" ytl="242.26" xbr="1919.09" ybr="776.62" outside="0" occluded="0" z_order="0"/>
+    <box frame="29" xtl="1718.90" ytl="239.64" xbr="1919.14" ybr="858.33" outside="0" occluded="0" z_order="0"/>
+    <box frame="30" xtl="1717.30" ytl="240.92" xbr="1919.08" ybr="793.84" outside="0" occluded="0" z_order="0"/>
+    <box frame="33" xtl="1716.80" ytl="242.13" xbr="1919.06" ybr="829.12" outside="0" occluded="0" z_order="0"/>
+    <box frame="34" xtl="1717.48" ytl="240.11" xbr="1919.04" ybr="803.91" outside="0" occluded="0" z_order="0"/>
+    <box frame="35" xtl="1717.05" ytl="242.08" xbr="1919.10" ybr="784.95" outside="0" occluded="0" z_order="0"/>
+    <box frame="36" xtl="1717.72" ytl="238.77" xbr="1919.01" ybr="815.98" outside="0" occluded="0" z_order="0"/>
+    <box frame="37" xtl="1718.04" ytl="242.26" xbr="1919.00" ybr="804.12" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="76" label="car" source="auto">
+    <box frame="26" xtl="1624.69" ytl="204.08" xbr="1777.83" ybr="414.50" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="77" label="car" source="auto">
+    <box frame="27" xtl="1625.25" ytl="204.62" xbr="1778.09" ybr="414.81" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="78" label="pedestrian" source="auto">
+    <box frame="29" xtl="495.89" ytl="142.21" xbr="652.05" ybr="478.21" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="79" label="pedestrian" source="auto">
+    <box frame="35" xtl="945.98" ytl="200.39" xbr="966.75" ybr="228.39" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="80" label="car" source="auto">
+    <box frame="35" xtl="1626.22" ytl="206.04" xbr="1778.45" ybr="413.84" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="81" label="car" source="auto">
+    <box frame="35" xtl="801.33" ytl="194.96" xbr="868.12" ybr="247.53" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="82" label="pedestrian" source="auto">
+    <box frame="37" xtl="925.04" ytl="202.20" xbr="938.85" ybr="227.64" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="83" label="two_wheeler" source="auto">
+    <box frame="38" xtl="982.76" ytl="211.86" xbr="998.89" ybr="243.03" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="84" label="pedestrian" source="auto">
+    <box frame="38" xtl="900.11" ytl="198.50" xbr="920.41" ybr="237.90" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="85" label="pedestrian" source="auto">
+    <box frame="38" xtl="929.01" ytl="203.41" xbr="950.05" ybr="237.47" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="86" label="two_wheeler" source="auto">
+    <box frame="38" xtl="981.76" ytl="219.66" xbr="997.29" ybr="243.45" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="87" label="pedestrian" source="auto">
+    <box frame="39" xtl="892.09" ytl="193.36" xbr="920.18" ybr="253.29" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="88" label="car" source="auto">
+    <box frame="39" xtl="1704.30" ytl="215.42" xbr="1843.65" ybr="475.58" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="89" label="two_wheeler" source="auto">
+    <box frame="39" xtl="955.47" ytl="216.22" xbr="982.25" ybr="250.83" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="90" label="two_wheeler" source="auto">
+    <box frame="40" xtl="671.58" ytl="228.56" xbr="729.99" ybr="314.81" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="91" label="two_wheeler" source="auto">
+    <box frame="40" xtl="924.94" ytl="216.37" xbr="956.40" ybr="267.23" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="92" label="two_wheeler" source="auto">
+    <box frame="42" xtl="721.48" ytl="242.30" xbr="819.79" ybr="411.00" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="93" label="bus_truck" source="auto">
+    <box frame="43" xtl="1067.44" ytl="428.70" xbr="1128.07" ybr="557.70" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="94" label="two_wheeler" source="auto">
+    <box frame="43" xtl="1209.86" ytl="207.15" xbr="1273.72" ybr="370.35" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="95" label="autorickshaw" source="auto">
+    <box frame="45" xtl="1011.23" ytl="448.38" xbr="1203.81" ybr="568.99" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="96" label="autorickshaw" source="auto">
+    <box frame="45" xtl="366.00" ytl="483.43" xbr="484.65" ybr="611.05" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="97" label="autorickshaw" source="auto">
+    <box frame="46" xtl="846.79" ytl="190.20" xbr="899.99" ybr="253.52" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="98" label="autorickshaw" source="auto">
+    <box frame="46" xtl="315.36" ytl="175.54" xbr="599.51" ybr="498.31" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="99" label="car" source="auto">
+    <box frame="46" xtl="892.54" ytl="197.30" xbr="936.70" ybr="242.63" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="100" label="two_wheeler" source="auto">
+    <box frame="46" xtl="776.22" ytl="211.17" xbr="814.90" ybr="258.50" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="101" label="autorickshaw" source="auto">
+    <box frame="47" xtl="792.63" ytl="187.99" xbr="862.40" ybr="267.82" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="102" label="car" source="auto">
+    <box frame="47" xtl="855.51" ytl="192.71" xbr="910.61" ybr="247.35" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="103" label="two_wheeler" source="auto">
+    <box frame="48" xtl="377.48" ytl="233.83" xbr="495.98" ybr="398.10" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="104" label="autorickshaw" source="auto">
+    <box frame="48" xtl="706.32" ytl="188.41" xbr="809.25" ybr="298.87" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="105" label="car" source="auto">
+    <box frame="48" xtl="802.84" ytl="197.64" xbr="885.52" ybr="264.33" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="106" label="car" source="auto">
+    <box frame="49" xtl="716.81" ytl="200.80" xbr="845.29" ybr="292.34" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="107" label="autorickshaw" source="auto">
+    <box frame="49" xtl="515.80" ytl="183.49" xbr="692.27" ybr="374.29" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="108" label="autorickshaw" source="auto">
+    <box frame="50" xtl="0.22" ytl="211.47" xbr="319.91" ybr="639.91" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="109" label="car" source="auto">
+    <box frame="50" xtl="274.11" ytl="206.14" xbr="484.06" ybr="375.33" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="110" label="autorickshaw" source="auto">
+    <box frame="50" xtl="1010.56" ytl="190.17" xbr="1059.31" ybr="255.49" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="111" label="two_wheeler" source="auto">
+    <box frame="51" xtl="589.09" ytl="268.04" xbr="706.56" ybr="442.61" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="112" label="car" source="auto">
+    <box frame="51" xtl="432.64" ytl="215.89" xbr="598.36" ybr="328.29" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="113" label="car" source="auto">
+    <box frame="52" xtl="0.00" ytl="286.66" xbr="146.16" ybr="570.70" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="114" label="two_wheeler" source="auto">
+    <box frame="52" xtl="240.86" ytl="295.87" xbr="429.01" ybr="551.35" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="115" label="car" source="auto">
+    <box frame="52" xtl="837.50" ytl="194.97" xbr="886.01" ybr="238.66" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="116" label="autorickshaw" source="auto">
+    <box frame="52" xtl="726.14" ytl="189.10" xbr="818.75" ybr="292.28" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="117" label="pedestrian" source="auto">
+    <box frame="52" xtl="1820.44" ytl="255.45" xbr="1864.00" ybr="399.19" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="118" label="two_wheeler" source="auto">
+    <box frame="52" xtl="658.26" ytl="247.48" xbr="800.97" ybr="473.11" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="119" label="autorickshaw" source="auto">
+    <box frame="53" xtl="389.58" ytl="187.14" xbr="618.56" ybr="436.66" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="120" label="car" source="auto">
+    <box frame="53" xtl="781.34" ytl="195.76" xbr="854.95" ybr="248.38" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="121" label="car" source="auto">
+    <box frame="54" xtl="678.65" ytl="192.61" xbr="794.55" ybr="276.28" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="122" label="car" source="auto">
+    <box frame="54" xtl="907.22" ytl="199.10" xbr="939.99" ybr="237.14" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="123" label="bus_truck" source="auto">
+    <box frame="54" xtl="874.99" ytl="180.60" xbr="915.64" ybr="236.09" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="124" label="bus_truck" source="auto">
+    <box frame="55" xtl="849.61" ytl="177.58" xbr="900.22" ybr="240.89" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="125" label="autorickshaw" source="auto">
+    <box frame="56" xtl="894.20" ytl="200.41" xbr="931.50" ybr="245.78" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="126" label="car" source="auto">
+    <box frame="56" xtl="0.00" ytl="238.28" xbr="162.48" ybr="626.03" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="127" label="bus_truck" source="auto">
+    <box frame="56" xtl="812.70" ytl="167.47" xbr="878.70" ybr="253.83" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="128" label="autorickshaw" source="auto">
+    <box frame="56" xtl="967.73" ytl="189.46" xbr="1022.15" ybr="271.71" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="129" label="bus_truck" source="auto">
+    <box frame="58" xtl="591.86" ytl="122.65" xbr="767.79" ybr="324.61" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="130" label="car" source="auto">
+    <box frame="58" xtl="790.45" ytl="194.99" xbr="846.31" ybr="254.10" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="131" label="autorickshaw" source="auto">
+    <box frame="58" xtl="838.53" ytl="193.90" xbr="898.64" ybr="268.59" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="132" label="two_wheeler" source="auto">
+    <box frame="59" xtl="884.17" ytl="213.29" xbr="907.42" ybr="251.68" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="133" label="two_wheeler" source="auto">
+    <box frame="59" xtl="883.96" ytl="222.81" xbr="905.44" ybr="251.67" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="134" label="bus_truck" source="auto">
+    <box frame="59" xtl="726.41" ytl="160.94" xbr="821.33" ybr="276.09" outside="0" occluded="0" z_order="0"/>
+  </track>
+  <track id="135" label="autorickshaw" source="auto">
+    <box frame="59" xtl="794.13" ytl="185.70" xbr="879.56" ybr="293.19" outside="0" occluded="0" z_order="0"/>
+  </track>
+</annotations>

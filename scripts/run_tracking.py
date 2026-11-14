@@ -1,94 +1,83 @@
-"""Read a traffic video and display YOLO object detections."""
+"""Run detection plus multi-object tracking on a traffic video."""
 
+from __future__ import annotations
+
+import argparse
 import logging
 import sys
 from pathlib import Path
 
-import cv2
-
-
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
-from road_safety.detection import ObjectDetector
+from road_safety.pipeline import run_pipeline
 
 
 logger = logging.getLogger(__name__)
-WINDOW_NAME = "Road Safety Analytics - Object Detection"
 
 
-def main():
-    video_path = (
-        PROJECT_ROOT / "data" / "raw" / "videos" / "traffic_sample_01.mp4"
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(
+        description="Track road users in a video and export MOT/CSV results."
     )
-    model_path = PROJECT_ROOT / "models" / "pretrained" / "yolov8n.pt"
+    parser.add_argument(
+        "--config",
+        type=Path,
+        default=PROJECT_ROOT / "configs" / "tracking.yaml",
+        help="Path to the tracking YAML config.",
+    )
+    parser.add_argument("--video", type=Path, help="Override input video path.")
+    parser.add_argument("--model", type=Path, help="Override model weights path.")
+    parser.add_argument("--tracker", help="Override tracker config (e.g. botsort.yaml).")
+    parser.add_argument("--imgsz", type=int, help="Override inference image size.")
+    parser.add_argument("--conf", type=float, help="Override confidence threshold.")
+    parser.add_argument("--output-width", type=int, help="Override output video width.")
+    parser.add_argument(
+        "--max-frames",
+        type=int,
+        default=None,
+        help="Process at most N frames (useful for smoke tests).",
+    )
+    parser.add_argument(
+        "--show",
+        action=argparse.BooleanOptionalAction,
+        default=None,
+        help="Show a live preview window.",
+    )
+    parser.add_argument(
+        "--save-video",
+        action=argparse.BooleanOptionalAction,
+        default=None,
+        help="Write the annotated output video.",
+    )
+    return parser
 
-    if not video_path.is_file():
-        raise FileNotFoundError(f"Input video not found: {video_path}")
 
-    cap = cv2.VideoCapture(str(video_path))
-    processed_frames = 0
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+    overrides = {
+        "input_video": args.video,
+        "model_weights": args.model,
+        "tracker": args.tracker,
+        "image_size": args.imgsz,
+        "confidence_threshold": args.conf,
+        "output_width": args.output_width,
+    }
 
     try:
-        if not cap.isOpened():
-            raise RuntimeError(f"Unable to open video: {video_path}")
+        run_pipeline(
+            config_path=args.config,
+            root=PROJECT_ROOT,
+            overrides=overrides,
+            show=args.show,
+            max_frames=args.max_frames,
+            save_video=args.save_video,
+        )
+    except Exception:
+        logger.exception("Tracking pipeline failed.")
+        return 1
 
-        # Load the detector once before processing frames.
-        logger.info("Loading model: %s", model_path.name)
-        detector = ObjectDetector(model_path=model_path, confidence=0.3)
-
-        logger.info("Processing video: %s", video_path.name)
-        logger.info("Press Q in the preview window to stop.")
-
-        while True:
-            success, frame = cap.read()
-
-            if not success:
-                if processed_frames == 0:
-                    raise RuntimeError("Unable to read the first video frame.")
-
-                logger.info("End of video or unreadable frame.")
-                break
-
-            # Detect objects and draw the predictions.
-            result = detector.detect(frame)
-            annotated_frame = result.plot()
-
-            # Resize only the preview.
-            height, width = annotated_frame.shape[:2]
-
-            if width > 1100:
-                preview_height = int(height * 1100 / width)
-                annotated_frame = cv2.resize(
-                    annotated_frame,
-                    (1100, preview_height),
-                )
-
-            detection_count = (
-                len(result.boxes) if result.boxes is not None else 0
-            )
-
-            cv2.putText(
-                annotated_frame,
-                f"Detections: {detection_count}",
-                (20, 35),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.8,
-                (0, 255, 255),
-                2,
-            )
-
-            cv2.imshow(WINDOW_NAME, annotated_frame)
-            processed_frames += 1
-
-            if cv2.waitKey(1) & 0xFF == ord("q"):
-                logger.info("Processing stopped by the user.")
-                break
-
-    finally:
-        cap.release()
-        cv2.destroyAllWindows()
-        logger.info("Processed frames: %d", processed_frames)
+    return 0
 
 
 if __name__ == "__main__":
@@ -96,11 +85,4 @@ if __name__ == "__main__":
         level=logging.INFO,
         format="%(levelname)s | %(message)s",
     )
-
-    try:
-        main()
-    except KeyboardInterrupt:
-        logger.info("Processing interrupted by the user.")
-    except Exception:
-        logger.exception("Video processing failed.")
-        sys.exit(1)
+    raise SystemExit(main())

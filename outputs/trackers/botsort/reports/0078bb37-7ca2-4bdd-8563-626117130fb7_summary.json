@@ -1,0 +1,41 @@
+{
+  "video": {
+    "path": "C:\\Users\\ASUS\\OneDrive\\Desktop\\road-safety-analytics\\data\\processed\\videos\\0078bb37-7ca2-4bdd-8563-626117130fb7.mp4",
+    "width": 1920,
+    "height": 994,
+    "fps": 1.0,
+    "frame_count": 180,
+    "duration_s": 180.0
+  },
+  "frames_processed": 180,
+  "elapsed_s": 29.036,
+  "processing_fps": 6.199,
+  "total_detections": 749,
+  "unique_tracks": 85,
+  "peak_simultaneous": 9,
+  "mean_confidence": 0.6566,
+  "classes": {
+    "bus_truck": {
+      "detections": 46,
+      "unique_tracks": 15
+    },
+    "car": {
+      "detections": 504,
+      "unique_tracks": 65
+    },
+    "pedestrian": {
+      "detections": 145,
+      "unique_tracks": 30
+    },
+    "two_wheeler": {
+      "detections": 54,
+      "unique_tracks": 4
+    }
+  },
+  "outputs": {
+    "video": "C:\\Users\\ASUS\\OneDrive\\Desktop\\road-safety-analytics\\outputs\\trackers\\botsort\\videos\\0078bb37-7ca2-4bdd-8563-626117130fb7_tracked.mp4",
+    "mot": "C:\\Users\\ASUS\\OneDrive\\Desktop\\road-safety-analytics\\outputs\\trackers\\botsort\\reports\\0078bb37-7ca2-4bdd-8563-626117130fb7_mot.txt",
+    "tracks_csv": "C:\\Users\\ASUS\\OneDrive\\Desktop\\road-safety-analytics\\outputs\\trackers\\botsort\\reports\\0078bb37-7ca2-4bdd-8563-626117130fb7_tracks.csv",
+    "summary_json": "C:\\Users\\ASUS\\OneDrive\\Desktop\\road-safety-analytics\\outputs\\trackers\\botsort\\reports\\0078bb37-7ca2-4bdd-8563-626117130fb7_summary.json"
+  }
+}

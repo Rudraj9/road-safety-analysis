@@ -1,6 +1,5 @@
 # Tracking Pipeline Configuration
-# Note: Paths are intended to resolve relative to the project root.
-# This configuration is a placeholder for the future implementation.
+# Paths resolve relative to the project root unless they are absolute.
 
 # Input video path
 input_video: "data/raw/videos/traffic_sample_01.mp4"
@@ -8,19 +7,19 @@ input_video: "data/raw/videos/traffic_sample_01.mp4"
 # Model weights path
 model_weights: "models/pretrained/yolov8n.pt"
 
-# Tracker configuration (e.g. bytetrack.yaml or botsort.yaml)
+# Tracker configuration (bytetrack.yaml, botsort.yaml, ocsort.yaml, ...)
 tracker: "bytetrack.yaml"
 
-# Detection confidence threshold
+# Detection thresholds
 confidence_threshold: 0.3
+iou_threshold: 0.5
 
-# Target class IDs to detect and track (COCO classes):
-# 0: person
-# 1: bicycle
-# 2: car
-# 3: motorcycle
-# 5: bus
-# 7: truck
+# Inference size. 1280 keeps small road users visible on 1080p/4K footage.
+# Lower to 640 for speed, raise to 1536 for wide junction shots.
+image_size: 1280
+
+# COCO class IDs to detect and track:
+# 0: person, 1: bicycle, 2: car, 3: motorcycle, 5: bus, 7: truck
 class_ids:
   - 0
   - 1
@@ -29,8 +28,25 @@ class_ids:
   - 5
   - 7
 
+# Map COCO classes to the project label set.
+# bicycle + motorcycle -> two_wheeler; bus + truck -> bus_truck.
+# autorickshaw and helmet status need a custom model / attribute stage.
+class_names:
+  0: pedestrian
+  1: two_wheeler
+  2: car
+  3: two_wheeler
+  5: bus_truck
+  7: bus_truck
+
 # Output settings
 output_dir: "outputs/videos"
+report_dir: "outputs/reports"
+output_width: 1280
+fourcc: "mp4v"
+
 show_preview: true
 save_output: true
 
+# "cpu", "0", or null for automatic selection
+device: null

@@ -1,99 +1,115 @@
-"""Run object detection on a traffic video."""
+"""Multi-object tracking wrappers around Ultralytics trackers."""
 
-import logging
-import sys
+from __future__ import annotations
+
+from dataclasses import dataclass
 from pathlib import Path
 
-import cv2
+import numpy as np
+from ultralytics import YOLO
+from ultralytics.engine.results import Results
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+@dataclass(frozen=True)
+class Track:
+    """One tracked object in one frame."""
 
-# Allow direct execution of this script with the project's src layout.
-sys.path.insert(0, str(PROJECT_ROOT / "src"))
+    track_id: int
+    class_id: int
+    class_name: str
+    confidence: float
+    xyxy: tuple[float, float, float, float]
 
-from road_safety.detection import ObjectDetector
+    @property
+    def xywh(self) -> tuple[float, float, float, float]:
+        x1, y1, x2, y2 = self.xyxy
+        return x1, y1, x2 - x1, y2 - y1
+
+    @property
+    def center(self) -> tuple[float, float]:
+        x1, y1, x2, y2 = self.xyxy
+        return (x1 + x2) / 2.0, (y1 + y2) / 2.0
 
 
-logger = logging.getLogger(__name__)
+def extract_tracks(
+    result: Results,
+    class_names: dict[int, str],
+) -> list[Track]:
+    """Convert an Ultralytics result into plain ``Track`` records."""
+    boxes = result.boxes
+    if boxes is None or len(boxes) == 0 or boxes.id is None:
+        return []
 
-WINDOW_NAME = "Road Safety Analytics | Object Detection"
+    ids = boxes.id.int().cpu().tolist()
+    class_ids = boxes.cls.int().cpu().tolist()
+    confidences = boxes.conf.cpu().tolist()
+    coordinates = boxes.xyxy.cpu().numpy()
 
-
-def main():
-    video_path = (
-        PROJECT_ROOT / "data" / "raw" / "videos" / "traffic_sample_01.mp4"
-    )
-    model_path = PROJECT_ROOT / "models" / "pretrained" / "yolov8n.pt"
-
-    if not video_path.is_file():
-        raise FileNotFoundError(f"Input video not found: {video_path}")
-
-    cap = cv2.VideoCapture(str(video_path))
-    processed_frames = 0
-
-    try:
-        if not cap.isOpened():
-            raise RuntimeError(f"Unable to open input video: {video_path}")
-
-        logger.info("Loading model: %s", model_path.name)
-        detector = ObjectDetector(
-            model_path=model_path,
-            confidence=0.3,
+    tracks: list[Track] = []
+    for track_id, class_id, confidence, xyxy in zip(
+        ids, class_ids, confidences, coordinates
+    ):
+        tracks.append(
+            Track(
+                track_id=int(track_id),
+                class_id=int(class_id),
+                class_name=class_names.get(int(class_id), str(class_id)),
+                confidence=float(confidence),
+                xyxy=tuple(float(value) for value in xyxy),
+            )
         )
 
-        logger.info("Processing video: %s", video_path.name)
-        logger.info("Press Q in the preview window to stop.")
-
-        while True:
-            success, frame = cap.read()
-
-            if not success:
-                if processed_frames == 0:
-                    raise RuntimeError("Unable to read the first video frame.")
-
-                logger.info("Video stream ended or the next frame is unreadable.")
-                break
-
-            # Detect objects in the original frame.
-            result = detector.detect(frame)
-
-            # Draw bounding boxes, class names, and confidence scores.
-            annotated_frame = result.plot()
-
-            # Resize only the displayed image.
-            height, width = annotated_frame.shape[:2]
-
-            if width > 1100:
-                preview_height = int(height * 1100 / width)
-                annotated_frame = cv2.resize(
-                    annotated_frame,
-                    (1100, preview_height),
-                )
-
-            cv2.imshow(WINDOW_NAME, annotated_frame)
-            processed_frames += 1
-
-            if cv2.waitKey(1) & 0xFF == ord("q"):
-                logger.info("Processing stopped by the user.")
-                break
-
-    finally:
-        cap.release()
-        cv2.destroyAllWindows()
-        logger.info("Processed frames: %d", processed_frames)
+    return tracks
 
 
-if __name__ == "__main__":
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(levelname)s | %(message)s",
-    )
+class ObjectTracker:
+    """Run detection plus multi-object tracking on a frame stream.
 
-    try:
-        main()
-    except KeyboardInterrupt:
-        logger.info("Processing interrupted by the user.")
-    except Exception:
-        logger.exception("Video processing failed.")
-        sys.exit(1)
+    ``persist=True`` keeps the tracker state between ``update`` calls, so the
+    same instance must be used for an entire video.
+    """
+
+    def __init__(
+        self,
+        model_path: str | Path,
+        class_ids: list[int],
+        class_names: dict[int, str] | None = None,
+        confidence: float = 0.3,
+        iou: float = 0.5,
+        image_size: int = 1280,
+        tracker: str = "bytetrack.yaml",
+        device: str | None = None,
+    ) -> None:
+        model_path = Path(model_path)
+        if not model_path.is_file():
+            raise FileNotFoundError(
+                f"Model weights not found: {model_path}. "
+                "Place the .pt file under models/pretrained/."
+            )
+
+        self.model = YOLO(str(model_path))
+        self.class_ids = class_ids
+        self.class_names = class_names or {
+            class_id: self.model.names[class_id] for class_id in class_ids
+        }
+        self.confidence = confidence
+        self.iou = iou
+        self.image_size = image_size
+        self.tracker = tracker
+        self.device = device
+
+    def update(self, frame: np.ndarray) -> tuple[Results, list[Track]]:
+        """Track objects in one BGR frame."""
+        results = self.model.track(
+            source=frame,
+            persist=True,
+            tracker=self.tracker,
+            conf=self.confidence,
+            iou=self.iou,
+            imgsz=self.image_size,
+            classes=self.class_ids,
+            device=self.device,
+            verbose=False,
+        )
+        result = results[0]
+        return result, extract_tracks(result, self.class_names)

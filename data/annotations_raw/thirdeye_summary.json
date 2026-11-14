@@ -1,0 +1,158 @@
+{
+  "splits": {
+    "train": [
+      "000db725-8180-4770-8b6a-4eb74aeda9f9",
+      "0049d23b-5aaf-4bc4-9f9c-a9c2c03dbc9e",
+      "0076d1e2-ef37-4445-9fa9-7d3bdf25bd8f",
+      "0078bb37-7ca2-4bdd-8563-626117130fb7",
+      "00797c49-b024-47d9-85e7-e7391d1498f7"
+    ],
+    "val": [
+      "007e2cdb-abe0-4fe7-89ea-79569159ad14"
+    ],
+    "test": [
+      "00ca74e0-be2b-4b3e-ab4b-46da5a9f4279"
+    ]
+  },
+  "totals": {
+    "clips": 7,
+    "frames": 780,
+    "detections": 3355,
+    "tracks": 2484,
+    "classes": {
+      "autorickshaw": 253,
+      "bus_truck": 381,
+      "car": 1423,
+      "pedestrian": 706,
+      "two_wheeler": 592
+    }
+  },
+  "clips": [
+    {
+      "clip_id": "000db725-8180-4770-8b6a-4eb74aeda9f9",
+      "frames": 60,
+      "detections": 633,
+      "tracks": 577,
+      "classes": {
+        "autorickshaw": 72,
+        "bus_truck": 157,
+        "car": 201,
+        "pedestrian": 111,
+        "two_wheeler": 92
+      },
+      "width": 1920,
+      "height": 994,
+      "mot": "data\\annotations_raw\\mot\\000db725-8180-4770-8b6a-4eb74aeda9f9.txt",
+      "cvat": "data\\annotations_raw\\cvat\\000db725-8180-4770-8b6a-4eb74aeda9f9\\annotations.xml",
+      "video": null
+    },
+    {
+      "clip_id": "0049d23b-5aaf-4bc4-9f9c-a9c2c03dbc9e",
+      "frames": 180,
+      "detections": 759,
+      "tracks": 551,
+      "classes": {
+        "autorickshaw": 36,
+        "bus_truck": 30,
+        "car": 253,
+        "pedestrian": 235,
+        "two_wheeler": 205
+      },
+      "width": 1920,
+      "height": 994,
+      "mot": "data\\annotations_raw\\mot\\0049d23b-5aaf-4bc4-9f9c-a9c2c03dbc9e.txt",
+      "cvat": "data\\annotations_raw\\cvat\\0049d23b-5aaf-4bc4-9f9c-a9c2c03dbc9e\\annotations.xml",
+      "video": null
+    },
+    {
+      "clip_id": "0076d1e2-ef37-4445-9fa9-7d3bdf25bd8f",
+      "frames": 60,
+      "detections": 188,
+      "tracks": 135,
+      "classes": {
+        "autorickshaw": 23,
+        "bus_truck": 16,
+        "car": 102,
+        "pedestrian": 23,
+        "two_wheeler": 24
+      },
+      "width": 1920,
+      "height": 994,
+      "mot": "data\\annotations_raw\\mot\\0076d1e2-ef37-4445-9fa9-7d3bdf25bd8f.txt",
+      "cvat": "data\\annotations_raw\\cvat\\0076d1e2-ef37-4445-9fa9-7d3bdf25bd8f\\annotations.xml",
+      "video": null
+    },
+    {
+      "clip_id": "0078bb37-7ca2-4bdd-8563-626117130fb7",
+      "frames": 180,
+      "detections": 729,
+      "tracks": 427,
+      "classes": {
+        "autorickshaw": 28,
+        "bus_truck": 3,
+        "car": 442,
+        "pedestrian": 149,
+        "two_wheeler": 107
+      },
+      "width": 1920,
+      "height": 994,
+      "mot": "data\\annotations_raw\\mot\\0078bb37-7ca2-4bdd-8563-626117130fb7.txt",
+      "cvat": "data\\annotations_raw\\cvat\\0078bb37-7ca2-4bdd-8563-626117130fb7\\annotations.xml",
+      "video": null
+    },
+    {
+      "clip_id": "00797c49-b024-47d9-85e7-e7391d1498f7",
+      "frames": 60,
+      "detections": 356,
+      "tracks": 205,
+      "classes": {
+        "autorickshaw": 32,
+        "bus_truck": 33,
+        "car": 220,
+        "pedestrian": 18,
+        "two_wheeler": 53
+      },
+      "width": 1920,
+      "height": 994,
+      "mot": "data\\annotations_raw\\mot\\00797c49-b024-47d9-85e7-e7391d1498f7.txt",
+      "cvat": "data\\annotations_raw\\cvat\\00797c49-b024-47d9-85e7-e7391d1498f7\\annotations.xml",
+      "video": null
+    },
+    {
+      "clip_id": "007e2cdb-abe0-4fe7-89ea-79569159ad14",
+      "frames": 180,
+      "detections": 448,
+      "tracks": 370,
+      "classes": {
+        "autorickshaw": 51,
+        "bus_truck": 103,
+        "car": 160,
+        "pedestrian": 74,
+        "two_wheeler": 60
+      },
+      "width": 1920,
+      "height": 994,
+      "mot": "data\\annotations_raw\\mot\\007e2cdb-abe0-4fe7-89ea-79569159ad14.txt",
+      "cvat": "data\\annotations_raw\\cvat\\007e2cdb-abe0-4fe7-89ea-79569159ad14\\annotations.xml",
+      "video": null
+    },
+    {
+      "clip_id": "00ca74e0-be2b-4b3e-ab4b-46da5a9f4279",
+      "frames": 60,
+      "detections": 242,
+      "tracks": 219,
+      "classes": {
+        "autorickshaw": 11,
+        "bus_truck": 39,
+        "car": 45,
+        "pedestrian": 96,
+        "two_wheeler": 51
+      },
+      "width": 1920,
+      "height": 994,
+      "mot": "data\\annotations_raw\\mot\\00ca74e0-be2b-4b3e-ab4b-46da5a9f4279.txt",
+      "cvat": "data\\annotations_raw\\cvat\\00ca74e0-be2b-4b3e-ab4b-46da5a9f4279\\annotations.xml",
+      "video": null
+    }
+  ]
+}

@@ -1,4 +1,21 @@
-ultralytics
-opencv-python
-PyYAML
+# Python dependencies for Road Safety Analytics
+# Core pipeline (verified on Windows, Python 3.13)
+ultralytics>=8.3
+opencv-python>=4.10
+PyYAML>=6.0
+numpy>=1.26
+requests>=2.31
+lap>=0.5.12
+matplotlib>=3.8
 
+# Optional dashboard (the static HTML report works without these)
+# streamlit>=1.36
+# pandas>=2.2
+
+# Optional development tooling (tests use stdlib unittest)
+# pytest>=8.0
+
+# Not required:
+# - scipy / motmetrics: src/road_safety/metrics.py implements MOTA/IDF1/IDSW
+#   with NumPy + lap.
+# - huggingface_hub: scripts/download_hf_subset.py downloads with requests.

@@ -1,0 +1,33 @@
+{
+  "video": {
+    "path": "C:\\Users\\ASUS\\OneDrive\\Desktop\\road-safety-analytics\\data\\processed\\videos\\007e2cdb-abe0-4fe7-89ea-79569159ad14.mp4",
+    "width": 1920,
+    "height": 994,
+    "fps": 1.0,
+    "frame_count": 180,
+    "duration_s": 180.0
+  },
+  "frames_processed": 180,
+  "elapsed_s": 32.051,
+  "processing_fps": 5.616,
+  "total_detections": 202,
+  "unique_tracks": 18,
+  "peak_simultaneous": 3,
+  "mean_confidence": 0.6997,
+  "classes": {
+    "bus_truck": {
+      "detections": 19,
+      "unique_tracks": 6
+    },
+    "car": {
+      "detections": 183,
+      "unique_tracks": 17
+    }
+  },
+  "outputs": {
+    "video": "C:\\Users\\ASUS\\OneDrive\\Desktop\\road-safety-analytics\\outputs\\trackers\\bytetrack\\videos\\007e2cdb-abe0-4fe7-89ea-79569159ad14_tracked.mp4",
+    "mot": "C:\\Users\\ASUS\\OneDrive\\Desktop\\road-safety-analytics\\outputs\\trackers\\bytetrack\\reports\\007e2cdb-abe0-4fe7-89ea-79569159ad14_mot.txt",
+    "tracks_csv": "C:\\Users\\ASUS\\OneDrive\\Desktop\\road-safety-analytics\\outputs\\trackers\\bytetrack\\reports\\007e2cdb-abe0-4fe7-89ea-79569159ad14_tracks.csv",
+    "summary_json": "C:\\Users\\ASUS\\OneDrive\\Desktop\\road-safety-analytics\\outputs\\trackers\\bytetrack\\reports\\007e2cdb-abe0-4fe7-89ea-79569159ad14_summary.json"
+  }
+}

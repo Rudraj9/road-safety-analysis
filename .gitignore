@@ -19,7 +19,8 @@ __pycache__/
 !.env.example
 
 # Local datasets and annotations
-data/raw/videos/*
+data/raw/*
+!data/raw/videos/
 !data/raw/videos/.gitkeep
 data/annotations/*
 !data/annotations/.gitkeep
@@ -43,4 +44,5 @@ outputs/videos/*
 !outputs/videos/.gitkeep
 outputs/reports/*
 !outputs/reports/.gitkeep
+outputs/tmp*/
 
